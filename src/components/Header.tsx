@@ -24,18 +24,18 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-gray-100 border-b p-4 flex justify-between items-center">
-      <div className="text-2xl font-semibold text-gray-900">NotesMe</div>
+    <header className="flex items-center justify-between p-4 bg-gray-100 border-b">
+      <div className="text-2xl font-semibold text-gray-900">EventMe</div>
 
       <div className="flex space-x-4">
         <button
-          className="bg-gray-100 text-gray-800 px-4 py-1 rounded border border-gray-300 hover:bg-gray-200"
+          className="px-4 py-1 text-gray-800 bg-gray-100 border border-gray-300 rounded hover:bg-gray-200"
           onClick={handleLoginClick}
         >
           LogIn
         </button>
         <button
-          className="bg-gray-100 text-gray-800 px-4 py-1 rounded border border-gray-300 hover:bg-gray-200"
+          className="px-4 py-1 text-gray-800 bg-gray-100 border border-gray-300 rounded hover:bg-gray-200"
           onClick={handleSignUpClick}
         >
           SignUp

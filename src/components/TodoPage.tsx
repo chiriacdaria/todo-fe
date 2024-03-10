@@ -17,11 +17,11 @@ const TodoPage: React.FC = () => {
     <div className="flex flex-col h-screen bg-gray-100">
       <Header />
 
-      <div className="flex-1 flex flex-col lg:flex-row overflow-hidden">
+      <div className="flex flex-col flex-1 overflow-hidden lg:flex-row">
         <NavBar />
 
         <main
-          className="flex-1 bg-gray-200 p-4"
+          className="flex-1 p-4 bg-gray-200"
           style={{
             maxHeight: `calc(100vh - ${headerHeight}px)`,
             overflow: "hidden"

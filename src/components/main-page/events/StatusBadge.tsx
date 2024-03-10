@@ -1,21 +1,21 @@
 // PriorityBadge.tsx
 import React from "react";
 
-interface PriorityBadgeProps {
-  priority: string;
+interface StatusBadgeProps {
+  status: string;
 }
 
-const PriorityBadge: React.FC<PriorityBadgeProps> = ({ priority }) => {
+const StatusBadge: React.FC<StatusBadgeProps> = ({ status }) => {
   let badgeColor = "";
 
-  switch (priority.toLowerCase()) {
-    case "low":
+  switch (status.toLowerCase()) {
+    case "going":
       badgeColor = "#9BCF53";
       break;
-    case "medium":
+    case "pending":
       badgeColor = "#FAA300";
       break;
-    case "high":
+    case "declined":
       badgeColor = "#ee4266";
       break;
     default:
@@ -27,9 +27,9 @@ const PriorityBadge: React.FC<PriorityBadgeProps> = ({ priority }) => {
       className={`inline-block px-4 py-1 text-xs font-semibold text-white rounded-xl ${badgeColor}`}
       style={{ backgroundColor: badgeColor }}
     >
-      {priority}
+      {status}
     </span>
   );
 };
 
-export default PriorityBadge;
+export default StatusBadge;

@@ -1,22 +1,24 @@
 import * as React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import TodoPage from "./components/TodoPage";
-import Completed from "./components/main-page/Completed";
+import Attended from "./components/main-page/Attented";
 import Overdue from "./components/main-page/Overdue";
 import Today from "./components/main-page/Today";
 import Calendar from "./components/main-page/Calendar";
-import Tasks from "./components/main-page/tasks/Tasks";
-import Task from "./components/main-page/tasks/Task";
+import Events from "./components/main-page/events/Events";
+import Event from "./components/main-page/events/Event";
+import CreateEvent from "./components/main-page/events/CreateEvent";
 
 const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/todo/*" element={<TodoPage />}>
-          <Route index element={<Tasks />} />
-          <Route path="tasks" element={<Tasks />} />
-          <Route path="tasks/:taskId" element={<Task />} />
-          <Route path="completed" element={<Completed />} />
+        <Route path="eventsme/*" element={<TodoPage />}>
+          <Route index element={<Events />} />
+          <Route path="" element={<Events />} />
+          <Route path="create" element={<CreateEvent />} />
+          <Route path=":eventId" element={<Event />} />
+          <Route path="attended" element={<Attended />} />
           <Route path="overdue" element={<Overdue />} />
           <Route path="today" element={<Today />} />
           <Route path="calendar" element={<Calendar />} />

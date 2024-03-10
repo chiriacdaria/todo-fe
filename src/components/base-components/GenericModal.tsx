@@ -1,4 +1,3 @@
-// GenericModal.tsx
 import React, { ReactNode } from "react";
 
 interface GenericModalProps {
@@ -41,8 +40,8 @@ const GenericModal: React.FC<GenericModalProps> = ({
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
           onClick={handleBackdropClick}
         >
-          <div className="p-4 bg-white w-80 rounded shadow-md">
-            <p className="text-lg font-semibold mb-4">{modalName}</p>
+          <div className="p-4 bg-white rounded shadow-md w-80">
+            <p className="mb-4 text-lg font-semibold">{modalName}</p>
             {children}
             <div className="flex justify-between mt-4">
               <button
@@ -52,7 +51,7 @@ const GenericModal: React.FC<GenericModalProps> = ({
                 Dismiss
               </button>
               <button
-                className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 ml-2"
+                className="px-4 py-2 ml-2 text-white bg-red-500 rounded hover:bg-red-600"
                 onClick={onButtonClick}
               >
                 {buttonText}
